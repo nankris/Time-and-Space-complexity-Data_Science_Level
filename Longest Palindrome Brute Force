@@ -1,0 +1,20 @@
+class Solution:
+    def longestPalindrome(self, s: str) -> str:
+        maxlen=1
+        start=0
+        k=len(s)
+        for i in range(k):
+            for j in range(i,k):
+                one_iter=1
+                for n in range(0, ((j-i)//2)+1):
+                    #here (j-1//2)+1 is because to find palindrome
+                    #we are doing this many comparisons
+                    if (s[i+n] != s[j-n]):
+                        #this is comparison of first and last and subsequent
+                        one_iter=0
+                    
+                if (one_iter!=0 and (j-i+1) > maxlen):
+                    start=i
+                    maxlen=j-i+1
+                    
+        return s[start:start+maxlen]
