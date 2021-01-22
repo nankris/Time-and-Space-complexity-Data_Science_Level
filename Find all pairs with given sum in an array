@@ -1,0 +1,15 @@
+#Brute Froce O(N2)
+
+arr = [8, 7, 2, 5, 3, 1]
+sum = 10
+
+cur_sum=0
+for i in range(len(arr)-1):
+  for j in range(i+1, len(arr)):
+    cur_sum=arr[i]+arr[j]
+    if cur_sum == sum:
+      print(arr[i], arr[j])
+
+O/P
+8,2
+7,3
