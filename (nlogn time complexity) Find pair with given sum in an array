@@ -1,0 +1,23 @@
+A = [8, 7, 2, 5, 3, 1]
+sum = 10
+
+A.sort()
+print(A)
+
+low = 0
+
+high = len(A)-1
+
+while low<high:
+  if A[low]+A[high]==sum:
+    print("two values are", A[low], A[high])
+    #return
+    break
+  if A[low]+A[high]<sum:
+    low=low+1
+  else:
+    high=high-1
+
+
+#detects first instace of such occurance
+#output for current function is "two values are 2 8"
