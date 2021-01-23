@@ -1,0 +1,10 @@
+#solution with hashing
+#to create hash map we use dictionary in python
+A = [8, 7, 2, 5, 3, 1]
+sum = 10
+
+dict = {}
+for index, value in enumerate(A):
+  if sum-value in dict:
+    print("value found at:", sum-A[value], A[value])
+  dict[value] = index
