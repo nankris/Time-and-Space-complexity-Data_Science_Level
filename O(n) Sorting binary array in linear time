@@ -1,0 +1,9 @@
+#Sorting binary array in linear time
+A = [0, 0, 1, 0, 1, 1, 0, 1, 0, 0]
+temp_A=[]
+zero_count=A.count(0)
+for i in range(zero_count):
+  temp_A.append(0)
+for i in range(len(A)-zero_count):
+  temp_A.append(1)
+print(temp_A)
