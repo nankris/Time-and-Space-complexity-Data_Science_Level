@@ -1,0 +1,26 @@
+import random
+def rock_paper_scissor(user):
+  #print(user)
+  computer=[]
+  #user=[]
+  computer_choice=['rock', 'paper', 'scissor']
+  computer.append(random.choice(computer_choice))
+  if user[0] == computer[0]:
+    print("its a tie")
+  elif user[0]=='scissor' and computer[0]=='paper':
+    print('you won')
+  elif user[0]=='paper' and computer[0]=='scissor':
+    print('winner is computer')
+  elif user[0]=='rock' and computer[0]=='paper':
+    print('winner is computer')
+  elif user[0]=='paper' and computer[0]=='rock':
+    print('you won')
+  elif user[0]=='scissor' and computer[0]=='rock':
+    print('winner is computer')
+  elif user[0]=='rock' and computer[0]=='scissor':
+    print('you won')
+
+user=[]
+user.append(input('Enter "rock", "paper", "scissor"'))
+print(user)
+rock_paper_scissor(user)
