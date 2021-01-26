@@ -1,0 +1,16 @@
+fib_memoization={}
+def fib(n):
+  if n in fib_memoization:
+    return fib_memoization[n]
+  if n == 1:
+    base_case = 1
+  elif n==2:
+    base_case = 1
+  elif n>2:
+    base_case = fib(n-1)+fib(n-2)
+  
+  fib_memoization[n]=base_case
+  return base_case
+fib(50)
+
+O/p: 12586269025
