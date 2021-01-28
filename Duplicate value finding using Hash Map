@@ -1,0 +1,12 @@
+A = [1, 2, 3, 4, 4]
+dct={}
+for i in range(len(A)):
+  dct[i]=None
+for i in range(len(A)):
+  if A[i] in dct.values():
+    print(A[i])
+  else:
+    dct[i]=A[i]
+    
+    
+O/P: 4
