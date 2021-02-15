@@ -1,0 +1,26 @@
+x=np.array([16, 3, 5, 17, 2, 4, 1])
+x = list(x)
+zer_lst=list(np.zeros(len(x)))
+#for i in range(len(x)):
+strt = 0
+end = len(x)
+while strt < len(x):
+  if strt == len(x)-1:
+    break
+  if end == 1:
+    break
+  tmp = 0
+  if x[strt] > x[strt+1]:
+    tmp = x[strt]
+    x[strt] =x[strt+1]
+    x[strt+1] = tmp
+    #i = i-1
+  tmp =0
+  if x[end-1] < x[end-2]:
+    tmp = x[end-1]
+    x[end-1] =x[end-2]
+    x[end-2] = tmp
+    #i = i-1
+  strt = strt+1
+  end = end-1
+x
