@@ -1,0 +1,21 @@
+#temp_lst = []
+#temp_lst_end = []
+#end = len(sp)
+
+sp = [5,7,9,13,11,6,6,3,3]
+target = 12
+
+strt = 0
+end = strt+1
+while strt<len(sp)-1:
+  """if strt == len(sp):
+    break"""
+ 
+  if sp[strt]+sp[end] == target:
+    temp_lst.append((sp[strt], sp[end]))
+  end+=1
+  if end == len(sp):
+    strt=strt+1
+    end = strt+1
+
+print(set(temp_lst))
