@@ -1,0 +1,9 @@
+from collections import OrderedDict 
+x=np.array([16, 3, 5, 17, 2, 4, 1])
+x = list(x)
+x_dct = {x[i]:i for i in range(len(x))}
+x_dct = OrderedDict(x_dct)
+x_dct.values()
+for i in sorted(x_dct):
+  print(i)
+#x_dct
