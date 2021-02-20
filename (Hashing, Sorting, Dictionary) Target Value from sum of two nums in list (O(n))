@@ -1,0 +1,15 @@
+sp = [5,7,9,13,11,6,6,3,3]
+target = 12
+sp
+
+temp_dct=dict(sorted({val: k for k, val in enumerate(sp)}.items()))
+print(temp_dct)
+
+temp_lst=[]
+for i in sp:
+  if target-i in temp_dct.keys():
+    temp_lst.append((i, target-i))
+    print(i, target-i)
+
+k=list(set(temp_lst))
+k[:((len(list(set(temp_lst)))//2)+1)]
