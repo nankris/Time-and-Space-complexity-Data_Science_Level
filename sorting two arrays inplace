@@ -1,0 +1,22 @@
+#https://www.techiedelight.com/inplace-merge-two-sorted-arrays/
+
+import pdb
+X = [1, 10, 14, 17, 28]
+Y = [ 2, 9, 13 ]
+
+for i in range(len(X)):
+  if X[i] > Y[0]:
+    temp = X[i]
+    X[i] = Y[0]
+    Y[0] = temp
+
+    first_element = Y[0]
+    k = 1
+    while k < len(Y) and Y[k] < first_element:
+      Y[k-1] = Y[k]
+      k = k+1
+    Y[k-1] = first_element
+print(X, Y)
+
+
+
